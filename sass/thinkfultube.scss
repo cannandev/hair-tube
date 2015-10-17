@@ -1,0 +1,175 @@
+@import 'normalize';
+
+html {
+  box-sizing: border-box;
+  font-size :16px;
+	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;  
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/** End Reset **/
+
+$light: #fff;
+$dark: #000;
+$medium: darken($light, 20%);
+$brand: yellow;
+$breakWide: 1190px;
+$breakSmall: 700px;
+
+
+body {
+	background: url(../img/ethnic.jpg) 20% 0 no-repeat;
+	@media all and (min-width: $breakWide) {
+		background-size: cover;
+	}
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.container {
+	width: 100%;
+	padding: 0 0.5em;	
+	margin: 0 auto;
+	@media all and (min-width: $breakWide) {
+		width: 70%;
+		padding: 0 2.5em;
+	}
+}
+
+.page-title {
+	color: $light;
+	text-align: center;
+	@media all and (min-width: $breakWide) {
+		margin-left: 0;
+		text-align: left;
+	}	
+	.fa-tv {
+		font-weight: bold;
+		padding-left: .5em;
+	}
+}
+
+.search {
+	position: relative;
+	width: 100%;
+	min-height: 400px;
+	@media all and (min-width: $breakWide) {
+		float: left;
+		width: 50%;
+	}	
+}
+
+#search-form {
+	margin: 0 auto;
+	position: relative;
+	width: 370px;
+	@media all and (min-width: $breakWide) {
+		margin: 0;
+	}	
+	.fa-times-circle {
+		color: $medium;
+		cursor: pointer;
+		display: block;
+		font-size: 1.4em;
+		position: absolute;
+		left: 250px;
+		top: 1px;				
+		margin: 5px 0;
+		vertical-align: middle;
+	}
+	button {
+		border-radius: 10px;
+		border: transparent;
+		color: $light;
+		padding: 8px 12px;
+		outline: 0;
+		vertical-align: top;
+		&:hover {
+			background-color: $dark;
+			border: 1px solid $light;
+			padding: 7px 11px;
+		}
+	}
+}
+
+#query {
+	border-radius: 10px;
+	border: none;
+	font-style: italic;
+	width: 280px;
+	height: 2.1em;
+	margin-right: .5em;
+	padding: 0 2em 0 .8em;
+	outline: 0;
+}
+
+#results {
+	display: none;
+	background-color: rgba($dark, 0.3);
+	border-radius: 5px;
+	padding: 1em 1em 1.5em 0;
+	color: $light;
+	float: right;
+	width: 100%;
+	@media all and (min-width: $breakWide) {
+		background-color: rgba($light, 0.3);
+	}	
+	@media all and (min-width: $breakWide) {
+		float: left;
+		width: 50%;
+	}		
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		margin-top: 0;
+		li {
+			display: inline-block;
+			padding: 0 0 1em 1em;
+			vertical-align: top;
+			width: 100%;			
+			@media all and (min-width: $breakSmall) {
+				width: 50%;
+			}
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		&.channel {
+			color: $dark;
+			font-weight: bold;
+			&:hover {
+				color: $brand;
+			}
+		}		
+		img {
+			border: 1px groove $light;
+		}
+	}
+	.arrows {
+		text-align: center;
+		span {
+			background-color: $medium;
+			border: 1px solid $medium;
+			border-radius: 10px;
+			cursor: pointer;
+			padding: 8px 10px;
+			&:hover {
+				background-color: $dark;
+				border: 1px solid $medium;
+			}
+		}
+		.fa-arrow-left {
+			margin-right: 10px;
+		}
+		.fa-arrow-right {
+			margin-left: 10px;
+		}
+	}
+}
