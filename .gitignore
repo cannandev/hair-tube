@@ -1,2 +1,4 @@
 .sass-cache
 *.css.map
+min/*
+js/api_key.js
