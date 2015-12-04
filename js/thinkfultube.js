@@ -7,7 +7,7 @@
 		var base = 'natural hair';
 		var params = {
 			part: 'snippet',
-			key: 'API_KEY',
+			key: 'AIzaSyDMsWACfX3OWfmPZePzaWd13iEM-cgbSww',
 			q: base + ' ' + query,
 			r: 'json',
 			maxResults: '6',
